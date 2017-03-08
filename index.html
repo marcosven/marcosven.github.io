@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>marco sven </title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #b3e0f2 25%, rgba(0, 0, 0, 0) 25%) -125px 0, linear-gradient(225deg, #b3e0f2 25%, rgba(0, 0, 0, 0) 25%) -125px 0, linear-gradient(315deg, #b3e0f2 25%, rgba(0, 0, 0, 0) 25%), linear-gradient(45deg, #b3e0f2 25%, rgba(0, 0, 0, 0) 25%);
+  background-size: 250px 250px;
+  background-color: skyblue;
+}
+
+.ball {
+  opacity: .75;
+}
+.ball:before, .ball:after {
+  animation: .8s ease-in-out alternate infinite;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.ball:before {
+  animation-name: Bounce;
+  background: radial-gradient(farthest-side at 44% 28%, #ffa3a3, #ff0000 30%, #800000 150%);
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+}
+.ball:after {
+  animation-name: Shrink;
+  height: 15px;
+  width: 120px;
+  background: #000;
+  box-shadow: 0 0 4px #000;
+  bottom: 5px;
+}
+
+@-moz-keyframes Bounce {
+  0% {
+    bottom: 50%;
+  }
+  70% {
+    transform: scale(1, 1);
+  }
+  100% {
+    bottom: 0;
+    transform: scale(1.15, 0.8);
+  }
+}
+@keyframes Bounce {
+  0% {
+    bottom: 50%;
+  }
+  70% {
+    transform: scale(1, 1);
+  }
+  100% {
+    bottom: 0;
+    transform: scale(1.15, 0.8);
+  }
+}
+@-moz-keyframes Shrink {
+  0% {
+    transform: scale(1.1);
+    opacity: .15;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: .45;
+  }
+}
+@keyframes Shrink {
+  0% {
+    transform: scale(1.1);
+    opacity: .15;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: .45;
+  }
+}
+
+    </style>
+
+
+</head>
+
+<body>
+<div class="ball"></div>
+</body>
+</html>
+   
